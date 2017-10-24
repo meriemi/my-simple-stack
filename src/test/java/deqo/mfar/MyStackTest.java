@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 public class MyStackTest {
 
     private MyStack stack;
+    private MyStack stack2;
     private Item i;
 
     @Before
