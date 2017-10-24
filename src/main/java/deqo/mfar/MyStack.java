@@ -1,11 +1,13 @@
 package deqo.mfar;
 
+import org.mockito.Mock;
+
 import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class MyStack implements SimpleStack{
 
-    private Stack<Item> stack = new Stack();
+    private Stack<Mock> stack = new Stack();
 
     public boolean isEmpty() {
         return stack.isEmpty();
@@ -15,15 +17,15 @@ public class MyStack implements SimpleStack{
         return stack.size();
     }
 
-    public void push(Item item) {
-        stack.push(item);
+    public void push(Mock mock) {
+        stack.push(mock);
     }
 
-    public Item peek() throws EmptyStackException {
+    public Mock peek() throws EmptyStackException {
         return stack.peek();
     }
 
-    public Item pop() throws EmptyStackException {
+    public Mock pop() throws EmptyStackException {
         return stack.pop();
     }
 }

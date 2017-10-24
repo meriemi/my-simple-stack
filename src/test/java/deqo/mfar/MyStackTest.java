@@ -2,6 +2,8 @@ package deqo.mfar;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+
 
 import java.util.EmptyStackException;
 
@@ -14,6 +16,7 @@ public class MyStackTest {
     private MyStack stack;
     private MyStack stack2;
     private Item i;
+    private Mock mock;
 
     @Before
     public void setUp() throws Exception {
@@ -22,7 +25,7 @@ public class MyStackTest {
 
     @Test
     public void isNotEmpty(){
-        stack.push(i);
+        stack.push(mock);
         assertFalse(stack.isEmpty());
     }
 
@@ -39,14 +42,14 @@ public class MyStackTest {
     @Test
     public void getSize() throws Exception {
         for (int i=0; i<5; i++){
-            stack.push(this.i);
+            stack.push(this.mock);
         }
         assertEquals(stack.getSize(), 5);
     }
 
     @Test
     public void push() throws Exception {
-        stack.push(i);
+        stack.push(mock);
         assertEquals(stack.getSize(), 1);
     }
 
@@ -57,13 +60,13 @@ public class MyStackTest {
 
     @Test
     public void peek() throws Exception {
-        stack.push(i);
+        stack.push(mock);
         assertEquals(i, stack.peek());
     }
 
     @Test
     public void pop() throws Exception {
-        stack.push(i);
+        stack.push(mock);
         assertEquals(i, stack.pop());
     }
 

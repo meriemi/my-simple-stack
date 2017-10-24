@@ -1,5 +1,7 @@
 package deqo.mfar;
 
+import org.mockito.Mock;
+
 import java.util.EmptyStackException;
 
 public interface SimpleStack {
@@ -17,16 +19,16 @@ public interface SimpleStack {
          * Pushes an item onto the top of this stack.
          * null item is allowed.
          */
-        public void push(Item item);
+        public void push(Mock mock);
         /**
          * Looks at the object at the top of this stack without removing it from the stack.
          */
-        public Item peek() throws EmptyStackException;
+        public Mock peek() throws EmptyStackException;
         /**
          * Removes the object at the top of this stack and returns that object as the value of this function.
          * @throws EmptyStackException if this stack is empty.
          */
-        public Item pop() throws EmptyStackException;
+        public Mock pop() throws EmptyStackException;
 
 
     }
