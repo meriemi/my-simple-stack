@@ -7,6 +7,8 @@ import java.util.EmptyStackException;
 
 import static org.junit.Assert.*;
 
+/*exigence 1*/
+
 public class MyStackTest {
 
     private MyStack stack;
